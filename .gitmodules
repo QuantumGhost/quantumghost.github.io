@@ -1,3 +1,6 @@
 [submodule "themes/attila"]
 	path = themes/attila
 	url = https://github.com/arulrajnet/attila.git
+[submodule "plugins/cjk_auto_spacing"]
+	path = plugins/cjk_auto_spacing
+	url = https://github.com/yuex/cjk-auto-spacing.git
