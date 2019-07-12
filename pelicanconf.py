@@ -34,7 +34,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-STATIC_PATHS = ['static', 'extra/CNAME', 'extra/robots.txt', 'extra/keybase.txt']
+STATIC_PATHS = ['static', 'extra']
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['cjk_auto_spacing']
 
