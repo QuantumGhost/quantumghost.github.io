@@ -5,3 +5,13 @@ Disallow: /
 # protect keybase.txt
 User-agent: *
 Disallow: keybase.txt
+
+# protect gpg public key
+User-agent: *
+Disallow: key.asc
+
+User-agent: 360Spider
+Disallow: /
+
+User-agent: 360WS
+Disallow: /

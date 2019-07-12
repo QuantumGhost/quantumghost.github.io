@@ -23,6 +23,7 @@ MENUITEMS = (
     ('博客', '/archives'),
     ('分类', '/categories'),
     ("标签", '/tags'),
+    ("GPG 签名策略", "/pages/gpg-policy"),
     ("关于", '/pages/about'),
 )
 
@@ -40,14 +41,15 @@ PLUGINS = ['cjk_auto_spacing']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/keybase.txt': {'path': 'keybase.txt'}
+    'extra/keybase.txt': {'path': 'keybase.txt'},
+    'extra/key.asc': {'path': 'key.asc'},
 }
 
 # Blogroll
 
 # Social widget
 SOCIAL = (('Github', 'https://github.com/QuantumGhost'),
-        ('Keybase', 'https://keybase.com/QuantumGhost'),)
+        ('Keybase', 'https://keybase.io/QuantumGhost'),)
 
 DEFAULT_PAGINATION = 20
 
