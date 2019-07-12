@@ -25,6 +25,8 @@ def clean(c):
     if os.path.isdir(CONFIG['deploy_path']):
         shutil.rmtree(CONFIG['deploy_path'])
         os.makedirs(CONFIG['deploy_path'])
+    c.run("find . -name '*.pyc' -delete")
+    c.run("find . -name '__pycache__' -delete")
 
 @task
 def build(c):
@@ -74,3 +76,8 @@ def publish(c):
     c.run('ghp-import -b {github_pages_branch} '
           '-m {commit_message} '
           '{deploy_path} -p'.format(**CONFIG))
+
+@task
+def watch(c):
+    """Serve site at http://localhost:8000/ and watch for changes"""
+    c.run('pelican -r -l -s pelicanconf.py')
