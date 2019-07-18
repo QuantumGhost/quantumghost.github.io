@@ -36,7 +36,7 @@ AUTHOR_FEED_RSS = None
 
 STATIC_PATHS = ['static', 'extra']
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['cjk_auto_spacing']
+PLUGINS = ['cjk_auto_spacing', 'pelican_gist']
 
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
