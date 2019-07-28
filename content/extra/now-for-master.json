@@ -10,5 +10,6 @@
     ],
     "regions": [
         "all"
-    ]
+    ],
+    "routes": [{ "src": "/(?:\w|/)+(?!.html)$", "dest": "$0.html" }]
 }

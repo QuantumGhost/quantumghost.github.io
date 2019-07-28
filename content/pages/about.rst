@@ -4,8 +4,8 @@
 :slug: about
 :status: published
 
-=======
 关于我：
+==========
 
 * 后端程序员
 * 会点 `Python <https://www.python.org>`_，会点 `Go <https://golang.org/>`_
