@@ -43,7 +43,7 @@ EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/keybase.txt': {'path': 'keybase.txt'},
     'extra/key.asc': {'path': 'key.asc'},
-    'extra/now.json': {'path': 'now.json'},
+    'extra/now-for-master.json': {'path': 'now.json'},
 }
 
 # Blogroll

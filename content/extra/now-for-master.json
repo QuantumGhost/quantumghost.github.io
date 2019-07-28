@@ -1,0 +1,17 @@
+{
+    "name": "quantumghost.github.io",
+    "version": 2,
+    "alias": [
+        "quantumghost",
+        "blog.quantumghost.me"
+    ],
+    "builds": [
+        {
+            "src": "**",
+            "use": "@now/static"
+        }
+    ],
+    "regions": [
+        "all"
+    ]
+}
