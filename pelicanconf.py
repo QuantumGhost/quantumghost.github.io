@@ -39,10 +39,11 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = ['cjk_auto_spacing', 'pelican_gist']
 
 EXTRA_PATH_METADATA = {
-    'extra/CNAME': {'path': 'CNAME'},
+    # 'extra/CNAME': {'path': 'CNAME'},
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/keybase.txt': {'path': 'keybase.txt'},
     'extra/key.asc': {'path': 'key.asc'},
+    'extra/now.json': {'path': 'now.json'},
 }
 
 # Blogroll
