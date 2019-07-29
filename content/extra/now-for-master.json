@@ -11,5 +11,5 @@
     "regions": [
         "all"
     ],
-    "routes": [{ "src": "/(?:\w|/)+(?!.html)$", "dest": "$0.html" }]
+    "routes": [{ "src": "/(?:[A-Za-z0-9-_]|/)+(?!.html)$", "dest": "$0.html" }]
 }
