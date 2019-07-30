@@ -4,6 +4,8 @@ GPG 密钥签名策略
 :slug: gpg-policy
 :status: published
 
+.. contents:: 目录
+
 概要
 =====
 
@@ -62,7 +64,7 @@ GPG 密钥签名策略
 - Level 3（积极认证）
 
   同二，且被签名者需要是我线下认识并且认为可以足够信任的人，被签名者需要使用硬件 Token（如
-  `Yubikey <https://www.yubico.com/>`_，GPG SmartCard）或密钥不可导的软件 Token
+  `Yubikey <https://www.yubico.com/>`_，GPG SmartCard）或密钥不可导出的软件 Token
   （如 `Krypton <https://krypt.co/>`_）保存密钥。
 
 签名流程
