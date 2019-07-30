@@ -16,4 +16,5 @@
 授权协议
 =========
 
-除特别注明外，本博客内容均使用 `知识共享署名-相同方式共享 4.0 国际许可协议 <https://creativecommons.org/licenses/by-sa/4.0/>`_ 发布。
+除特别注明外，本博客内容均使用 `知识共享署名-相同方式共享 4.0 国际许可协议 <https://creativecommons.org/licenses/by-sa/4.0/>`_ 发布，代码均使用
+`New BSD License <https://opensource.org/licenses/BSD-3-Clause>`_ 发布。
