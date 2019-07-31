@@ -4,3 +4,6 @@
 [submodule "plugins/cjk_auto_spacing"]
 	path = plugins/cjk_auto_spacing
 	url = https://github.com/yuex/cjk-auto-spacing.git
+[submodule "pelican_gist"]
+	path = plugins/pelican_gist
+	url = https://github.com/magnunleno/pelican-gist.git
