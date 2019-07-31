@@ -27,6 +27,10 @@ MENUITEMS = (
     ("关于", '/pages/about'),
 )
 
+SITEMAP = {
+    "format": "txt",
+}
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -36,7 +40,7 @@ AUTHOR_FEED_RSS = None
 
 STATIC_PATHS = ['static', 'extra']
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['cjk_auto_spacing', 'pelican_gist']
+PLUGINS = ['cjk_auto_spacing', 'pelican_gist', 'sitemap', 'headerid']
 
 EXTRA_PATH_METADATA = {
     # 'extra/CNAME': {'path': 'CNAME'},
