@@ -38,7 +38,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-STATIC_PATHS = ['static', 'extra']
+STATIC_PATHS = ['static', 'extra', '.well-known']
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['cjk_auto_spacing', 'pelican_gist', 'sitemap', 'headerid']
 
