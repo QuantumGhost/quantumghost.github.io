@@ -1,0 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: https://keybase.io/quantumghost/
+Encryption: https://keybase.io/quantumghost/pgp_keys.asc
+Encryption: https://blog.quantumghost.me/key.asc
+Preferred-Languages: en, zh
+Canonical: https://blog.quantumghost.me/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEExoWYza+FEdFsuQYQspoUCGUWGE0FAl1FYq8ACgkQspoUCGUW
+GE3jHg/+Pm7dRwnHyKwNFEs5s08DnBnmWIWkiOUkog1tbz1j6aug7CX6Na8i9Dlv
+ABmTC2jMjWRvWyi6d5A1P0b5GF7rJG0WrkgGsgekaK6HsBfjRMLvVWZY+BKSWHyD
+/dsd/LyGKTYePago9nfDOgdG7fOQiqzXxSHaCCoWUJhGkLP3nAaEI3qtpKJat0V0
+l+/BUG/PUwq8QjNbNL7oiC+ObKJc/5qxWq788wStLX3ejjbn7RhIQuaUXXGOq2mo
+0xqsbG5HkUpA0L0rNWKNQH+rf2VQW+D67dU1Kqr7DS68FKzoRX/bf2MjFuNTPsyN
+HfNN5iRBYLaolb6CBV4k875JUAGR5XvuKhsNf6YLDTcyQf+nML4xNjTlHFKTrMFC
+xcaNlRZC/aJpSO8eG1Sxo3ITrHtgrRuYPDWO+qp31lcv86f5kk6I1Hab+rUYJRTS
+kB8jnajvaBT0IQ6jxU4Pfu14WlFlaOwhZaaSv0eUYVV4AlEoyWPb9Afr1YnRcsA4
+asKtvtCSQKvrEDI302wIBzpzQYRShXWcy5N8+bOgETo11yLlwqQKU1PdXkZLN9x2
+DLpVcN00lFH0LG3GZkcofLmeXxhlG5liIhMW1dAPaRy9l1nwhBfj+bn80xlwzrEP
+qQcT3rXXL7CugQl5h4wNbyQzUy3Ndy273f7Jk5Wri5aYyiZuO2g=
+=0R0I
+-----END PGP SIGNATURE-----
