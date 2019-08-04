@@ -38,7 +38,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-STATIC_PATHS = ['static', 'extra', '.well-known']
+STATIC_PATHS = ['static', 'extra']
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['cjk_auto_spacing', 'pelican_gist', 'sitemap', 'headerid']
 
@@ -48,6 +48,7 @@ EXTRA_PATH_METADATA = {
     'extra/keybase.txt': {'path': 'keybase.txt'},
     'extra/key.asc': {'path': 'key.asc'},
     'extra/now-for-master.json': {'path': 'now.json'},
+    'extra/security.txt': {'path': 'security.txt'},
 }
 
 # Blogroll
