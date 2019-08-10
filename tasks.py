@@ -11,37 +11,53 @@ from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
 
 CONFIG = {
     # Local path configuration (can be absolute or relative to tasks.py)
-    'deploy_path': 'output',
+    "deploy_path": "output",
     # Github Pages configuration
-    'github_pages_branch': 'master',
-    'commit_message': "'Publish site on {}'".format(datetime.date.today().isoformat()),
+    "github_pages_branch": "master",
+    "commit_message": "'Publish site on {}'".format(datetime.date.today().isoformat()),
     # Port for `serve`
-    'port': 8000,
+    "port": 8000,
 }
+
+
+@task
+def format(c):
+    """format codes with formatters"""
+    c.run("black .")
+
+
+@task(name="check-style")
+def check_style(c):
+    c.run("black --check .")
+
 
 @task
 def clean(c):
     """Remove generated files"""
-    if os.path.isdir(CONFIG['deploy_path']):
-        shutil.rmtree(CONFIG['deploy_path'])
-        os.makedirs(CONFIG['deploy_path'])
+    if os.path.isdir(CONFIG["deploy_path"]):
+        shutil.rmtree(CONFIG["deploy_path"])
+        os.makedirs(CONFIG["deploy_path"])
     c.run("find . -name '*.pyc' -delete")
     c.run("find . -name '__pycache__' -delete")
+
 
 @task
 def build(c):
     """Build local version of site"""
-    c.run('pelican -s pelicanconf.py')
+    c.run("pelican -s pelicanconf.py")
+
 
 @task
 def rebuild(c):
     """`build` with the delete switch"""
-    c.run('pelican -d -s pelicanconf.py')
+    c.run("pelican -d -s pelicanconf.py")
+
 
 @task
 def regenerate(c):
     """Automatically regenerate site upon file modification"""
-    c.run('pelican -r -s pelicanconf.py')
+    c.run("pelican -r -s pelicanconf.py")
+
 
 @task
 def serve(c):
@@ -51,12 +67,12 @@ def serve(c):
         allow_reuse_address = True
 
     server = AddressReuseTCPServer(
-        CONFIG['deploy_path'],
-        ('', CONFIG['port']),
-        ComplexHTTPRequestHandler)
+        CONFIG["deploy_path"], ("", CONFIG["port"]), ComplexHTTPRequestHandler
+    )
 
-    sys.stderr.write('Serving on port {port} ...\n'.format(**CONFIG))
+    sys.stderr.write("Serving on port {port} ...\n".format(**CONFIG))
     server.serve_forever()
+
 
 @task
 def reserve(c):
@@ -64,20 +80,25 @@ def reserve(c):
     build(c)
     serve(c)
 
+
 @task
 def preview(c):
     """Build production version of site"""
-    c.run('pelican -s publishconf.py')
+    c.run("pelican -s publishconf.py")
+
 
 @task
 def publish(c):
     """Publish to GitHub Pages"""
     preview(c)
-    c.run('ghp-import -b {github_pages_branch} '
-          '-m {commit_message} '
-          '{deploy_path} -p'.format(**CONFIG))
+    c.run(
+        "ghp-import -b {github_pages_branch} "
+        "-m {commit_message} "
+        "{deploy_path} -p".format(**CONFIG)
+    )
+
 
 @task
 def watch(c):
     """Serve site at http://localhost:8000/ and watch for changes"""
-    c.run('pelican -r -l -s pelicanconf.py')
+    c.run("pelican -r -l -s pelicanconf.py")
