@@ -1,0 +1,15 @@
+
+参考：https://blog.quindorian.org/2018/03/building-a-2u-amd-ryzen-server-proxmox-gpu-passthrough.html/
+
+BIOS 设置：
+
+- Enable IOMUU
+- Enable SVM
+
+GRUB 设置：
+
+- ``amd_iommu=on iommu=pt video=vesafb:off,efifb:off``
+
+`解释 <https://passthroughpo.st/explaining-csm-efifboff-setting-boot-gpu-manually/>`_
+
+0a:00.0
