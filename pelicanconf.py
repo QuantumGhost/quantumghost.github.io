@@ -24,6 +24,7 @@ MENUITEMS = (
     ("呓语", "https://t.me/s/quantumghost_randoms"),
     ("GPG 签名策略", "/pages/gpg-policy"),
     ("关于", "/pages/about"),
+    ("RSS", "/pages/rss")
 )
 
 SITEMAP = {"format": "txt"}
@@ -60,3 +61,6 @@ DEFAULT_PAGINATION = 20
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+FEED_ALL_ATOM = "feeds/all.atom.xml"
+CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
