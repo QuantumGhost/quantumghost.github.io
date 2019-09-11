@@ -4,6 +4,7 @@ Hello, Pelican
 :date: 2019-01-14
 :slug: hello-pelican
 :status: published
+:category: technology
 
 这个博客总算是建起来了。
 

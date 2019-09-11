@@ -4,7 +4,8 @@
 :date: 2019-07-18
 :slug: use-zerotier-for-remote-access
 :status: published
-:tags: 技术, ZeroTier, 网络
+:tags: ZeroTier, 网络
+:category: technology
 
 .. contents:: 目录
 
