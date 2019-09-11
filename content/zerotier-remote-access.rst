@@ -3,17 +3,13 @@
 
 :date: 2019-07-18
 :slug: use-zerotier-for-remote-access
-:status: draft
+:status: published
+:tags: 技术, ZeroTier, 网络
 
 .. contents:: 目录
 
-如果你在家中有一台 HomeLab 的话，你可能也会像我一样想要随时随地能够访问到它。传统的方案包括
-`DDNS <https://en.wikipedia.org/wiki/Dynamic_DNS>`_，
-`VPN <https://en.wikipedia.org/wiki/Virtual_private_network>`_ 或者用 ssh 来做
-`端口转发 <https://www.ssh.com/ssh/tunneling/example>`_。上述方法都有一个局限，需要家中的
-路由器有公网 IP，而目前很多地区的运营商并不提供公网 IP，上面的办法也就没有用武之地了。另一个
-办法是使用诸如 `Frp <https://github.com/fatedier/frp>`_ 之类的工具进行转发，这种方案不需
-要公网 IP 也能运行，但是需要一台稳定的服务器并进行相关配置，而且延迟也会有所上升。
+如果你在家中有一台 HomeLab 的话，你可能也会像我一样想要随时随地能够访问到它和它上面的各种服务。
+ZeroTier 就是为此而生的。
 
 `ZeroTier <https://www.zerotier.com/>`_ 是一个 L2 VPN 软件，但是与传统的 VPN 软件不同
 的是，它并没有采用
@@ -25,11 +21,71 @@
 
 使用 ZeroTier 进行内网穿透有两种模式，一种是在家庭局域网中某台电脑上安装 ZeroTier，并将其作为虚拟
 网络的出口路由，再配合 ZeroTier 的路由表和 iptables，将流量转发到局域网内其他电脑；另一种是直接将
-ZeroTier 网段和局域网网段进行 L2 桥接。下面将会简单介绍如何使用这两种方式进行内网穿透。
+ZeroTier 网段和局域网网段进行 L2 桥接。
 
 NAT 方式
 =============
 
+大体上的原理就是把局域网内一台设备作为路由，对 ZeroTier 网段的流量进行
+`地址转换 <http://bit.ly/2LHSA2l>`_。实现方式不详述，有兴趣的请参考
+`Gist <http://bit.ly/34F9Fmg>`_。（仅适用于 Linux）
 
 桥接方式
 =============
+
+首先需要规划网段。一般家庭用户的默认网段为 ``192.168.xx.0/24``，如果要结合 ZeroTier，需要保证
+路由器的 IP 段和 ZeroTier 自动分配的 IP 段不冲突，同时两边又处于同一子网。比较简单的办法是把原来
+的 LAN 扩大到 ``/22`` 或者 ``/23``。
+
+例如，原来的子网是 ``192.168.0.0/24``，那么扩大的时候可以扩大到 ``192.168.0.0/22``，这样局域网和 ZeroTier
+可以分别使用 ``192.168.0.100`` - ``192.168.0.200`` 和 ``192.168.1.100`` - ``192.168.1.200`` 这两个 IP
+段进行自动 IP 分配，同时也能保持互联。
+
+接下来就是需要在局域网内找一台设备安装 ZeroTier 并加入网络。如果可能的话，路由器是最好的选择，
+可以使用 `OpenWrt <https://openwrt.org>`_ 或者 `Entware <https://github.com/Entware/Entware>`_
+在路由器上安装 ZeroTier。如果路由器不能安装 ZeroTier，选择一台在线率高的设备也行。
+
+安装完成之后，进入 ZeroTier 管理界面，找到要进行桥接的设备，点击左侧的设置图标，勾选 ``Allow Ethernet Bridging``；
+同时勾选上方设置中的 ``Enable Broadcast``。（这一步非常重要，IPv4 依赖于 ARP 来发现其他设备，如果没有开启广播的话，
+家庭网络内的设备就发现不了 ZeroTier 内的设备了）
+
+如图：
+
+.. image:: /static/images/zerotier-allow-bridging.png
+   :alt: allow bridging in ZeroTier control panel
+
+.. image:: /static/images/zerotier-enable-broadcast.png
+   :alt: enable broadcast for bridged device
+
+然后，将 ZeroTier 的网卡与该设备的网卡进行桥接。具体请参考对应操作系统的相关内容。
+
+最后，如果你使用了 DHCP，你还需要在 ZeroTier 的规则引擎中屏蔽掉家庭网络路由的 DHCP 请求和响应，可以参考下面的规则
+
+.. code::
+
+    drop ethertype ipv4
+        and ipprotocol udp
+        and sport 68
+        and dport 67
+    ;
+
+    drop ethertype ipv4
+        and ipprotocol udp
+        and sport 67
+        and dport 68
+    ;
+
+
+
+后记
+===========
+
+如果你有公网 IP，而且不需要内网互联的话，可以考虑 `DDNS <https://en.wikipedia.org/wiki/Dynamic_DNS>`_，或者用 ssh 来做
+`端口转发 <https://www.ssh.com/ssh/tunneling/example>`_。如果没有公网 IP，
+也可以考虑使用诸如 `Frp <https://github.com/fatedier/frp>`_ 之类的工具进行转发。当然，
+这需要一台稳定的服务器并进行相关配置，而且延迟也会有所上升。
+
+另外，如果 ZeroTier 的两端都没有公网 IP 的话，NAT 打洞的成功率会低很多，通过官方转发的延迟非常高，
+这个时候可以考虑自己建立 Moon 服务器的方式来进行转发。
+
+FIN
