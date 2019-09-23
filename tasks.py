@@ -102,3 +102,7 @@ def publish(c):
 def watch(c):
     """Serve site at http://localhost:8000/ and watch for changes"""
     c.run("pelican -r -l -s pelicanconf.py")
+
+@task(name='list-drafts')
+def list_drafts(c):
+    c.run("find . -name '*.draft'")
