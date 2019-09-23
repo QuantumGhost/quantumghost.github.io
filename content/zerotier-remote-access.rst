@@ -58,7 +58,13 @@ NAT 方式
 .. image:: /static/images/zerotier-enable-broadcast.png
    :alt: enable broadcast for bridged device
 
-然后，将 ZeroTier 的网卡与该设备的网卡进行桥接。具体请参考对应操作系统的相关内容。
+然后，将 ZeroTier 的网卡与该设备的网卡进行桥接。我是使用路由器进行桥接，路由器默认创建了 ``br0``
+作为所有 LAN 端口的桥接网卡，所以我只需要 ``brctl addif br0 $ZT_INTERFACE`` 即可。如果不是使用
+路由器作为桥接设备的话，那么需要先手动使用 ``brctl addbr`` 创建桥接网卡，再使用 ``brctl addif``
+把物理网卡和 ZeroTier 网卡添加到桥接中。Linux 下的操作可以参考
+`Linux 文档 <https://wiki.linuxfoundation.org/networking/bridge>`_ 和
+`Arch Wiki <https://wiki.archlinux.org/index.php/Network_bridge>`_，其他操作系统请参考对应
+文档。
 
 最后，如果你使用了 DHCP，你还需要在 ZeroTier 的规则引擎中屏蔽掉家庭网络路由的 DHCP 请求和响应，可以参考下面的规则
 
