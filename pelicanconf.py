@@ -21,9 +21,8 @@ MENUITEMS = (
     ("博客", "/archives"),
     ("分类", "/categories"),
     ("标签", "/tags"),
+    ("关于 / About", "/pages/about"),
     ("呓语", "https://t.me/s/quantumghost_randoms"),
-    ("GPG 签名策略", "/pages/gpg-policy"),
-    ("关于", "/pages/about"),
     ("RSS", "/pages/rss")
 )
 

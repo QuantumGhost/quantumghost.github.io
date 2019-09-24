@@ -1,17 +1,23 @@
-关于
-####
+关于我
+#######
 
 :slug: about
 :status: published
 
-关于我：
+`English Version </pages/about-en>`_
+
+- 后端工程师
+- 会点 `Python <https://www.python.org>`_，会点 `Go <https://golang.org/>`_
+- 懂一点密码学
+
+联系方式
 ==========
 
-* 后端程序员
-* 会点 `Python <https://www.python.org>`_，会点 `Go <https://golang.org/>`_
-* 懂一点密码学
-* `Github <https://github.com/QuantumGhost>`_
-* `我的 GPG 信息 </pages/gpg-policy>`_
+- 邮件: ``echo 5Liq5Lq66YKu566x77yabHFkMTk5MUBnbWFpbC5jb20K | base64 --decode``
+- `Github <https://github.com/QuantumGhost>`_
+- `GPG 信息 </pages/gpg-policy>`_
+- `Keybase <https://keybase.io/quantumghost>`_
+- `Twitter <https://twitter.com/Quantum_Ghost>`_
 
 授权协议
 =========
