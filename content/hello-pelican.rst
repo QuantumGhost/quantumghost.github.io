@@ -40,6 +40,9 @@ Markdown 缺乏扩展性，无法嵌入 LaTeX 公式等内容；第三方扩展�
 
 TL；DR：因为 web annotation 很 cool。
 
+2019.11.18 更新：我换到 `Commento <https://commento.io/>`_ 了，因为我发现 Hypothesis 连
+最基本的评论提醒功能都没有 😂😂。
+
 
 为什么用 Zeit Now 做发布
 =========================
