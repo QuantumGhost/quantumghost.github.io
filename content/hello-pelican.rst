@@ -12,7 +12,7 @@ Hello, Pelican
 
 - 博客系统：`Pelican <https://docs.getpelican.com/>`_
 - 评论系统：`Hypothesis <https://hypothes.is>`_
-- 发布系统：`Zeit Now <https://zeit>`_
+- 发布系统：`Zeit Now <https://zeit.co>`_
 
 为什么选择 Pelican
 ======================

@@ -23,7 +23,8 @@ MENUITEMS = (
     ("标签", "/tags"),
     ("关于 / About", "/pages/about"),
     ("呓语", "https://t.me/s/quantumghost_randoms"),
-    ("RSS", "/pages/rss")
+    ("友链", "/pages/ones-i-know"),
+    ("RSS", "/pages/rss"),
 )
 
 SITEMAP = {"format": "txt"}
