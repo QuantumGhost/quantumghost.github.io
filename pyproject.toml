@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = [
     "QuantumGhost <obelisk.reg+github@gmail.com>"
 ]
+description = "Blog of QuantumGhost"
 
 [tool.poetry.dependencies]
 python = "^3.7"
