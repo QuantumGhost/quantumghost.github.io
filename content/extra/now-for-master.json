@@ -2,14 +2,23 @@
     "name": "quantumghost.github.io",
     "version": 2,
     "alias": ["blog.quantumghost.me"],
-    "builds": [
-        {
-            "src": "**",
-            "use": "@now/static"
-        }
-    ],
+    "builds": [{
+        "src": "**",
+        "use": "@now/static"
+    }],
     "regions": [
         "all"
     ],
-    "routes": [{ "src": "/(?:[A-Za-z0-9-_]|/)+(?!.\\w+)$", "dest": "$0.html" }]
+    "routes": [{
+            "src": ".*",
+            "headers": {
+                "Strict-Transport-Security": "max-age=63072000;"
+            },
+            "continue": true
+        },
+        {
+            "src": "/(?:[A-Za-z0-9-_]|/)+(?!.\\w+)$",
+            "dest": "$0.html"
+        }
+    ]
 }
