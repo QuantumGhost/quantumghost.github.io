@@ -1,0 +1,21 @@
+Golang 错误处理
+=======================
+
+错误与异常
+可预见 vs 不可预见
+可处理 vs 不可处理
+
+error type vs specific interface vs concrete type
+
+error handling
+
+就地处理
+集中处理
+
+error context
+
+stack
+kv pairs
+
+
+try
