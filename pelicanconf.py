@@ -5,7 +5,7 @@ SITENAME = "QuantumGhost's Vault"
 SITEURL = ""
 THEME = "themes/attila"
 
-PATH = "content"
+PATH = "content/posts"
 TIMEZONE = "Asia/Hong_Kong"
 
 DEFAULT_LANG = "zh-CN"
