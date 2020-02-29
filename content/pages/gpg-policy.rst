@@ -23,6 +23,7 @@ GPG 密钥签名策略
 - ``gpg --fetch-keys https://keybase.io/quantumghost/key.asc``
 - ``gpg --recv-keys --keyserver hkps://keys.openpgp.org C68598CDAF8511D16CB90610B29A14086516184D``
 - ``gpg --fetch-keys https://blog.quantumghost.me/key.asc``
+- ``gpg --fetch-keys https://github.com/quantumghost.gpg``
 
 你也可以在 `Keybase <https://keybase.io/>`_ 上关注 `我 <https://keybase.io/quantumghost>`_。
 
