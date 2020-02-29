@@ -6,19 +6,8 @@
         "src": "**",
         "use": "@now/static"
     }],
-    "regions": [
-        "all"
-    ],
     "routes": [{
-            "src": ".*",
-            "headers": {
-                "Strict-Transport-Security": "max-age=63072000;"
-            },
-            "continue": true
-        },
-        {
-            "src": "/(?:[A-Za-z0-9-_]|/)+(?!.\\w+)$",
-            "dest": "$0.html"
-        }
-    ]
+        "src": "/(?:[A-Za-z0-9-_]|/)+(?!.\\w+)$",
+        "dest": "$0.html"
+    }]
 }
