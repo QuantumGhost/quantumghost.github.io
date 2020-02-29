@@ -5,7 +5,8 @@ SITENAME = "QuantumGhost's Vault"
 SITEURL = ""
 THEME = "themes/attila"
 
-PATH = "content/posts"
+PATH = "content"
+ARTICLE_PATHS = ["posts"]
 TIMEZONE = "Asia/Hong_Kong"
 
 DEFAULT_LANG = "zh-CN"
@@ -47,6 +48,7 @@ EXTRA_PATH_METADATA = {
     "extra/key.asc": {"path": "key.asc"},
     "extra/now-for-master.json": {"path": "now.json"},
     "extra/security.txt": {"path": "security.txt"},
+    "extra/.gitignore": {"path": ".gitignore"},
 }
 
 # Blogroll
