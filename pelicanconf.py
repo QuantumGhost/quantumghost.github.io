@@ -44,7 +44,6 @@ PLUGINS = ["cjk_auto_spacing", "pelican_gist", "sitemap", "headerid"]
 EXTRA_PATH_METADATA = {
     # 'extra/CNAME': {'path': 'CNAME'},
     "extra/robots.txt": {"path": "robots.txt"},
-    "extra/keybase.txt": {"path": "keybase.txt"},
     "extra/key.asc": {"path": "key.asc"},
     "extra/now-for-master.json": {"path": "now.json"},
     "extra/security.txt": {"path": "security.txt"},
