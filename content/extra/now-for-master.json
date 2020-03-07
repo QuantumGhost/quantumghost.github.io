@@ -2,7 +2,6 @@
     "name": "quantumghost.github.io",
     "version": 2,
     "alias": [
-        "blog.quantumghost.me",
         "blog.quantumghost.dev"
     ],
     "builds": [{
