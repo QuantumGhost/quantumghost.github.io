@@ -4,6 +4,8 @@ import os
 import shutil
 import sys
 import datetime
+import pathlib
+from string import Template
 
 from invoke import task
 from invoke.util import cd
@@ -103,6 +105,34 @@ def watch(c):
     """Serve site at http://localhost:8000/ and watch for changes"""
     c.run("pelican -r -l -s pelicanconf.py")
 
-@task(name='list-drafts')
+
+@task(name="list-drafts")
 def list_drafts(c):
     c.run("find . -name '*.draft'")
+
+
+TMPL = """$title
+=====================================================
+
+:date: $date
+:slug: $slug
+:status: draft
+:tags:
+:category:
+
+
+"""
+
+
+@task
+def new(c, slug, title=""):
+    today = datetime.date.today()
+    template = Template(TMPL)
+    content = template.substitute(date=today.isoformat(), title=title, slug=slug)
+    path = pathlib.Path(__file__).parent.joinpath("content", "drafts", f"{slug}.rst")
+    if path.exists():
+        print("file exists.")
+        exit(1)
+
+    with open(path, "w") as fout:
+        fout.write(content)
