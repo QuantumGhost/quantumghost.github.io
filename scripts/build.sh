@@ -7,8 +7,8 @@ SCRIPT_DIR="$(realpath $(dirname $0))"
 REPO_ROOT="$(dirname "${SCRIPT_DIR}")"
 
 BASE_URL='https://blog.quantumghost.dev/'
-if [ -n "${VERCEL_URL}" ]; then
-    BASE_URL="https://${VERCEL_URL}"
+if [ -n "${VERCEL_PROJECT_PRODUCTION_URL}" ]; then
+    BASE_URL="https://${VERCEL_PROJECT_PRODUCTION_URL}"
 fi
 
 hugo build --gc --baseURL "${BASE_URL}"
