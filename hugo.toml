@@ -25,7 +25,7 @@ pagerSize = 20
   author = "QuantumGhost"
   description = "QuantumGhost's personal blog"
   keywords = "blog,developer,personal"
-  avatarurl = "images/avatar.jpeg"
+  avatarurl = "static/images/avatar.jpeg"
   dateFormat = "2006-01-02"
   #gravatar = "john.doe@example.com"
 
