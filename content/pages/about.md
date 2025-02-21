@@ -15,7 +15,6 @@ title: 关于我
 - 邮件:
     `echo 5Liq5Lq66YKu566x77yabHFkMTk5MUBnbWFpbC5jb20K | base64 --decode`
 - [Github](https://github.com/QuantumGhost)
-- [GPG 信息](/pages/gpg-policy)
 - [Keybase](https://keybase.io/quantumghost)
 - [Mastodon: @quantumghost@mastodon.social](https://mastodon.social/@quantumghost)
 - [Bluesky: @quantumghost.bsky.social](https://bsky.app/profile/quantumghost.bsky.social)
