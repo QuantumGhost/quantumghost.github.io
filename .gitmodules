@@ -14,5 +14,5 @@
 	path = hugo-blog/themes/archie
 	url = https://github.com/athul/archie.git
 [submodule "hugo-blog/themes/hugo-coder"]
-	path = hugo-blog/themes/hugo-coder
+	path = themes/hugo-coder
 	url = https://github.com/luizdepra/hugo-coder.git
