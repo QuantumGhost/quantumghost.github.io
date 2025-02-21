@@ -1,0 +1,105 @@
+baseURL = 'https://blog.quantumghost.dev/'
+languageCode = 'zh'
+title = "QuantumGhost's Vault"
+theme = 'hugo-coder'
+defaultContentLanguage = "zh"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+enableEmoji = true
+
+# 以前的 RSS 文件路径是 /feeds/all.atom.xml
+# 和 /feeds/technology.atom.xml
+# 需要用 post build hooks 来重命名 RSS 到
+# all.atom.xml
+[pagination]
+pagerSize = 20
+
+[permalinks]
+  categories =  "/:section/:slug"
+
+  [permalinks.page]
+    posts = '/:slug'
+  [permalinks.section]
+    posts = '/posts/'
+[params]
+  author = "QuantumGhost"
+  description = "QuantumGhost's personal blog"
+  keywords = "blog,developer,personal"
+  avatarurl = "images/avatar.jpeg"
+  dateFormat = "2006-01-02"
+  #gravatar = "john.doe@example.com"
+
+#   faviconSVG = "/img/favicon.svg"
+#   favicon_32 = "/img/favicon-32x32.png"
+#   favicon_16 = "/img/favicon-16x16.png"
+
+  since = 2019
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  # customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+  [params.giscus] # https://giscus.app
+    repo = "QuantumGhost/blog-comments"
+    repoID = "MDEwOlJlcG9zaXRvcnkyNDg1NDQ5MDA="
+    category = "博客评论"
+    categoryID = "DIC_kwDODtB-hM4CnLPI"
+    mapping = "pathname"
+    strict = "1"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    theme = "preferred_color_scheme"
+    lang = "zh-CN"
+
+  [taxonomies]
+  category = "categories"
+  tag = "tags"
+
+  [[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/QuantumGhost/"
+
+  [[params.social]]
+  name = "Mastodon"
+  icon = "fa-brands fa-mastodon fa-2x"
+  weight = 2
+  url = "https://mastodon.social/@quantumghost"
+
+  [[params.social]]
+  name = "Bluesky"
+  icon = "fa-brands fa-bluesky fa-2x"
+  weight = 3
+  url = "https://bsky.app/profile/quantumghost.bsky.social"
+
+  [[params.social]]
+  name = "RSS"
+  icon = "fa-solid fa-rss fa-2x"
+  weight = 4
+  url = "https://myhugosite.com/index.xml"
+  rel = "alternate"
+  type = "application/rss+xml"
+
+  [[menu.main]]
+    name = "博客"
+    weight = 1
+    url  = "/archives"
+  [[menu.main]]
+    name = "关于我"
+    weight = 2
+    url = "/pages/about"
+  [[menu.main]]
+    name = "友链"
+    weight = 3
+    url = "/pages/ones-i-know"
+  [[menu.main]]
+    name = "RSS"
+    weight = 4
+    url = "/pages/rss"

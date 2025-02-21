@@ -7,3 +7,12 @@
 [submodule "pelican_gist"]
 	path = plugins/pelican_gist
 	url = https://github.com/magnunleno/pelican-gist.git
+[submodule "hugo-blog/themes/hello-friend-ng"]
+	path = hugo-blog/themes/hello-friend-ng
+	url = https://github.com/rhazdon/hugo-theme-hello-friend-ng.git
+[submodule "hugo-blog/themes/archie"]
+	path = hugo-blog/themes/archie
+	url = https://github.com/athul/archie.git
+[submodule "hugo-blog/themes/hugo-coder"]
+	path = hugo-blog/themes/hugo-coder
+	url = https://github.com/luizdepra/hugo-coder.git
