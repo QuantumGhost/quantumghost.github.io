@@ -6,9 +6,10 @@ set -o pipefail
 SCRIPT_DIR="$(realpath $(dirname $0))"
 REPO_ROOT="$(dirname "${SCRIPT_DIR}")"
 
-BASE_URL='https://blog.quantumghost.dev/'
-if [ -n "${VERCEL_PROJECT_PRODUCTION_URL}" ]; then
-    BASE_URL="https://${VERCEL_PROJECT_PRODUCTION_URL}"
+if [ "${VERCEL_ENV}" = "production" ]; then
+    BASE_URL='https://blog.quantumghost.dev/'
+else
+    BASE_URL="https://${VERCEL_URL}"
 fi
 
 hugo build --gc --baseURL "${BASE_URL}"
