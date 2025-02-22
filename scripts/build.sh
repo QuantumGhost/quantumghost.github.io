@@ -13,4 +13,6 @@ else
 fi
 
 hugo build --gc --baseURL "${BASE_URL}"
-cp "${REPO_ROOT}/public/index.xml" "${REPO_ROOT}/public/all.atom.xml"
+
+mkdir -p "${REPO_ROOT}/public/feeds"
+cp "${REPO_ROOT}/public/index.xml" "${REPO_ROOT}/public/feeds/all.atom.xml"
