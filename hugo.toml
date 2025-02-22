@@ -83,7 +83,7 @@ pagerSize = 20
   name = "RSS"
   icon = "fa-solid fa-rss fa-2x"
   weight = 4
-  url = "https://myhugosite.com/index.xml"
+  url = "/feeds/all.atom.xml"
   rel = "alternate"
   type = "application/rss+xml"
 
@@ -102,4 +102,4 @@ pagerSize = 20
   [[menu.main]]
     name = "RSS"
     weight = 4
-    url = "/pages/rss"
+    url = "/feeds/all.atom.xml"
