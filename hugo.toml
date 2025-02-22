@@ -45,10 +45,10 @@ pagerSize = 20
   # customJS = ["js/custom.js"]
 
   [params.giscus] # https://giscus.app
-    repo = "QuantumGhost/blog-comments"
-    repoID = "MDEwOlJlcG9zaXRvcnkyNDg1NDQ5MDA="
+    repo = "QuantumGhost/quantumghost.github.io"
+    repoID = "MDEwOlJlcG9zaXRvcnkxNjU2NzQ3NzE="
     category = "博客评论"
-    categoryID = "DIC_kwDODtB-hM4CnLPI"
+    categoryID = "DIC_kwDOCd__E84CnMta"
     mapping = "pathname"
     strict = "1"
     reactionsEnabled = "1"
